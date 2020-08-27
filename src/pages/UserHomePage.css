@@ -1,0 +1,9 @@
+.PreviewCards {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+
+.two-btn {
+    display: flex;
+}

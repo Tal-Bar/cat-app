@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(cat10.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: red;
+    
+    /* background-image: no-repeat; */
+    /* background-position: center; */
+  
+}
+
+.form-title {
+    width: 800px;
+    background-color: rgba(214, 207, 207, 0.8);  
+    margin: auto;
+    color: black;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+    margin-top: 50px;
+}
+
+.main {
+     width: 800px; 
+    background-color: rgb(220,220,220, 0.7); 
+   
+    margin: auto;
+    
+}
+
+form {
+    padding: 10px;
+  
+}
+
+.info h2 {
+    position: relative;
+    top: -17px;
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 125px;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.info input {
+    position: relative;
+    left: 130px;
+    top: -37px;
+    width: 300px;
+    line-height: 32px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px; 
+    color: #555;
+    border: none;
+}
+
+#description {
+    width: 450px;
+    height: 100px;
+    position: relative;
+    left: 130px;
+    top: -37px;
+    border-radius: 6px;
+    border: none;
+   
+}
+
+.radio-main {
+    width: 80%;
+    margin: auto;
+    border-radius: 15px 15px 15px 15px;
+    /* background-color: tomato; */
+    /* margin-left: 10px;
+    padding-top: 20px; */
+    /* background-color: #e7400e; */
+    /* background-color: rgb(231,64,14, 0.4);  */
+    
+}
+
+.cat-radio-Title {
+    position: relative;
+    top: -17px;
+
+    margin-left: 0px;
+    color: black;
+    font-size: 15px;
+}
+
+.cat-radio {
+    position: relative;
+    left: 130px;
+    top: -40px;
+    /* background-color: teal; */
+    width: 500px;
+    line-height: 2px;
+}
+
+.cat-radio input {
+    position: relative;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+.cat-radio label {
+    font-size: large;
+    color: black;
+    margin-right: 20px;
+    margin-left: 5px;
+    position: relative;
+    right: 50px;
+    top: -3px;
+    
+}
+
+.add-file-main {
+    position: relative;
+    top: -15px;
+}
+
+.add-file {
+    color: black;
+    padding: 10px; 
+}
+
+#InputFile {
+    color: black;
+}
+
+
+
+button {
+    display: block;
+    width: 80%;
+    margin: 20px 0px 20px 0px;
+    margin: auto;
+    text-align: center;
+    font-size: x-large;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #f4511e; 
+    color: white;
+    padding: 16px 32px;
+    font-size: 16px;
+    opacity: 1;
+    transition: 0.3s;
+    outline: none;
+}
+
+button:hover {
+    opacity: 1;
+    background-color: #e9c8a2;
+    outline: none;
+    /* border: 1px solid #e9c8a2; */
+}
+
+
+
+/* .option {
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 523px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555; 
+    outline: none;
+    overflow: hidden;
+}
+
+.option option {
+    font-size: 20px;
+} */
+
+
+/* .lastname {
+    position: relative;
+    left: 70px;
+    top: -37px;
+    width: 100px;
+    line-height: 35px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px; 
+    color: #555;
+} */
+
+/* .lastname {
+    position: relative;
+    left: 180px;
+    top: -78px;
+    width: 130px;
+    line-height: 35px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+} */
+
+/* .firstlabel {
+    position: relative;
+    left: 203px;
+    top: -45px;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.lastlabel {
+    position: relative;
+    left: 178px;
+    top: -45px;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 14px;
+} */
+
+/* .code {
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 95px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555; 
+} */
+
+/* .area-code {
+    position: relative;
+    left: 58px;
+    top: -4x;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.phone-number {
+    position: relative;
+    left: -100px;
+    top: -2px;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 14px;
+} */
+
+/* .fullname {
+    position: relative;
+    left: 130px;
+    top: -37px;
+    width: 200px;
+    line-height: 32px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px; 
+    color: #555;
+}
+
+
+
+.location {
+    position: relative;
+    left: 130px;
+    top: -37px;
+    line-height: 32px;
+    width: 200px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555; 
+}
+
+.email {
+    position: relative;
+    left: 130px;
+    top: -37px;
+    line-height: 32px;
+    width: 200px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555; 
+}
+
+.number {
+    position: relative;
+    left: 130px;
+    top: -37px;
+    line-height: 32px;
+    width: 200px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555; 
+} */
+
+/* #name {
+    width: 100%;
+    height: 100px;
+} */
+
+/* .radio {
+    display: inline-block;
+    padding-right: 70px;
+    font-size: 25px;
+    margin-left: 25px;
+    margin-top: 15px;
+    color: white;
+} */
+
+/* button {
+    background-color: #ee8d1d;
+    display: block;
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #ee8d1d;
+    padding: 14px 110px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.25px;
+}
+
+button:hover {
+    background-color: #e9c8a2;
+    border: 1px solid #e9c8a2;
+} */

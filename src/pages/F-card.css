@@ -1,0 +1,133 @@
+
+#fcard {
+    color: white;
+}
+
+.form-title2 {
+   
+    display: flex;
+    justify-content: center;
+    max-width: 550px;
+    margin: 0 auto;
+    background: rgb(220,220,220, 0.7); 
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 30);
+    padding: 15px;
+}
+
+.form-title2 h2 {
+    text-align: center;   
+}
+
+
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px; 
+}
+
+
+
+
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+    /* background: rgba(0, 0, 0, 0.7); */
+    background: rgb(220,220,220, 0.2); 
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 30);
+    /* text-shadow: -1.0px 0 black; */
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+.input-fields, .msg {
+    width: 48%;
+}
+
+.input-fields .input, .msg textarea {
+    margin: 10px 0;
+    /* background: transparent; */
+    border: 0;
+    /* border-bottom: 2px solid orangered; */
+    outline: none;
+    padding: 10px;
+    width: 100%; 
+    border-radius: 5px; 
+    
+}
+
+.msg textarea {
+    height: 70%;
+}
+
+::-webkit-input-placeholder {
+    color: black;
+}
+
+::-moz-input-placeholder {
+    color: black;
+}
+
+::-ms-input-placeholder {
+    color: black;
+}
+
+/* .btn {
+    background: orangered;
+    text-align: center;
+    padding: 15px;
+    margin-top: 37px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+} */
+
+.btn {
+    text-align: center;
+    padding: 15px;
+    margin-top: 37px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #f4511e; 
+    color: white;
+    font-size: 16px;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 1;
+    background-color: #b42a00; 
+    /* outline: none; */
+    /* border: 1px solid #e9c8a2; */
+}
+
+@media screen and (max-width: 600px) {
+    .contact-form {
+        flex-direction: column;
+    }
+    .form-title2 {
+        flex-direction: column;
+    }
+    .msg textarea {
+        height: 80px;
+    }
+    .input-fields,
+    .msg {
+        width: 100%;
+    }
+}
+
