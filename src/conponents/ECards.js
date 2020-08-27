@@ -29,7 +29,6 @@ class ECards extends Component {
                             <p>Cat Type:{data["cat-type"]}</p>
                             <p>Phone:{data.phone}</p>
                             <p> {data.text}</p> 
-                            <p> {data.text}</p> 
                         </div>
                     </div>
                 </div>
