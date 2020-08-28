@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import RecipesNavbar from '../conponents/RecipesNavbar';
 import { Redirect } from 'react-router-dom';
-import eCardsJson from '../data/eCards.json'
+import eCardsJson from '../data/eCards.json';
 import ECards from '../conponents/ECards';
+import FCards from '../conponents/FCards';
+import fCardsJson from '../data/fCards.json'
+import './AllCards.css'
 
 class AllCards extends Component {
 
@@ -25,10 +28,15 @@ class AllCards extends Component {
                 <div>
                 All Cards Page
                 </div>
-                <div>
+                <div className ="cards-container">
                     {
                         eCardsJson.map(card =>{
                            return <ECards key={card.id} data={card}  /> 
+                        })
+                    }
+                     {
+                        fCardsJson.map(card =>{
+                           return <FCards key={card.id} data={card}  /> 
                         })
                     }
                 </div>

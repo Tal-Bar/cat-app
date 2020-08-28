@@ -11,6 +11,7 @@ class UserHomePage extends Component {
     constructor(props) {
         super(props);
         this.handleCard=this.handleCard.bind(this)
+        this.handleToAllCards =this.handleToAllCards.bind(this)
         this.state ={
             cardRoute:""
         }
@@ -21,6 +22,9 @@ class UserHomePage extends Component {
 
         this.setState({...this.state,cardRoute:event.target.value})
        
+    }
+    handleToAllCards(){
+        this.setState({...this.state,cardRoute:'allCards'})
     }
     render() {
         const {activeUser, handleLogout} = this.props;
@@ -34,6 +38,8 @@ class UserHomePage extends Component {
                 return <Redirect to='/e-card'/>
             case "F":
                 return <Redirect to='/f-card'/>
+            case 'allCards':
+                return <Redirect to ='/cards'/>
             default:
                 break;
         }
@@ -50,7 +56,7 @@ class UserHomePage extends Component {
                         }
                     </div>
 
-                    <button>All Cards</button>
+                    <button onClick={this.handleToAllCards}>All Cards</button>
 
                     <div className="two-btn">
                         <select id = "new-card" onChange={this.handleCard}>

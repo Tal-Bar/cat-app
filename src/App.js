@@ -8,6 +8,7 @@ import UserHomePage from './pages/UserHomePage'
 import FCard from './pages/F-Card';
 import AllCards from './pages/AllCards';
 import ECardPage from './pages/E-card';
+import NewECard from './pages/NewEcard';
 
 
 
@@ -19,6 +20,7 @@ class App extends React.Component {
     this.state = {
       // activeUser: null,
       users: jasonUsers,
+      newECardData:null,
       activeUser: {
         id: 1234,
         fname: "John",
@@ -28,6 +30,7 @@ class App extends React.Component {
 
     this.handleLogout = this.handleLogout.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
+    this.updateNewEcard=this.updateNewEcard.bind(this)
 
   }
 
@@ -39,8 +42,14 @@ class App extends React.Component {
   
   handleLogout() {
     this.setState({
-      activeUser: null
+      activeUser: null,
+      
     })
+  }
+  
+  updateNewEcard(data){
+    console.log('calling from app.js',data)
+    this.setState({...this.state,newECardData:data,})
   }
 
   render() {
@@ -68,10 +77,13 @@ class App extends React.Component {
         <AllCards activeUser={activeUser} handleLogout={this.handleLogout}/>
       </Route>
       <Route exact path="/e-card">
-        <ECardPage activeUser={activeUser} handleLogout={this.handleLogout}/>
+        <ECardPage activeUser={activeUser} handleLogout={this.handleLogout} updateNewEcard={this.updateNewEcard}/>
       </Route>
       <Route exact path="/f-card">
         <FCard activeUser={activeUser} handleLogout={this.handleLogout}/>
+      </Route>
+      <Route exact path="/new-e-card">
+        <NewECard activeUser={activeUser} handleLogout={this.handleLogout} newECardData={this.state.newECardData}/>
       </Route>
     </Switch>
     </HashRouter>
