@@ -1,6 +1,19 @@
-.new-e-card-container {
-    width: 550px;
-    height: 800px;
+.newEContainer{
     background-color: chocolate;
+    width: 550px;
+    height:auto;
+}
 
+.new-e-card-container {
+    display: flex;
+}
+
+label{
+    display: block;
+    margin: 10px;
+    color: white;
+}
+
+#status *{
+    display: inline;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 
 class RecipesNavbar extends Component {
 
@@ -25,7 +26,11 @@ class RecipesNavbar extends Component {
         return (
             <div>
                 <ul className="topnav">
-                    <li><a className="active" href="/">Recipe book</a></li>
+                    <li>
+                        <Link  className="active" to="/">
+                            <a>Cat App</a>
+                        </Link>
+                    </li>
                    
                     {recipesMenuItem}
                     {loginMenuItem}

@@ -9,6 +9,7 @@ class ECardPage extends Component {
         super(props)
         this.RedirectToNewECard=this.RedirectToNewECard.bind(this)
         this.handleInput=this.handleInput.bind(this)
+        this.handleImage=this.handleImage.bind(this)
         this.state ={
             cardRoute:'',
             firstname:'',
@@ -17,14 +18,25 @@ class ECardPage extends Component {
             phone:'',
             date:'',
             description:'',
-            photo:''
+            catType:'',
+            catAge:'',
+            photo:'',
+            status:'open'
         }
     }
 
     handleInput(event){
+        console.log(event.target.value)
         this.setState({
             [event.target.name]:event.target.value
         })
+    }
+    handleImage(event){
+        if (event.target.files && event.target.files[0]) {
+            this.setState({
+              photo: URL.createObjectURL(event.target.files[0])
+            });
+          }
     }
 
     RedirectToNewECard(){
@@ -36,7 +48,10 @@ class ECardPage extends Component {
             phone:this.state.phone,
             date:this.state.date,
             description:this.state.description,
-            photo:this.state.photo
+            age:this.state.catAge,
+            type:this.state.catType,
+            photo:this.state.photo,
+            status:this.state.status
         }
         this.props.updateNewEcard(data)
        this.setState({...this.state,cardRoute:'newECard'})
@@ -89,27 +104,27 @@ class ECardPage extends Component {
 
                             <div className="radio-main">
                                 <h2 className="cat-radio-Title">Cat Age</h2>
-                                <div className="cat-radio">
-                                    <input type="radio" id="adult" name="age" value="adult"/>
+                                <div id='cat-age' className="cat-radio" onChange={this.handleInput}>
+                                    <input type="radio" id="adult" name="catAge" value="adult"/>
                                     <label for="male">Adult</label>
-                                    <input type="radio" id="kitten" name="age" value="kitten"/>
+                                    <input type="radio" id="kitten" name="catAge" value="kitten"/>
                                     <label for="female">Kitten</label>
-                                    <input type="radio" id="unknown" name="age" value="unknown"/>
+                                    <input type="radio" id="unknown" name="catAge" value="unknown"/>
                                     <label for="other">Unknown</label> 
                                 </div>
 
                                 <h2 className="cat-radio-Title">Cat Type</h2>
-                                <div className="cat-radio">
-                                    <input type="radio" id="Feral cat" name="type" value="Feral cat"/>
+                                <div id='cat-type' className="cat-radio" onChange={this.handleInput}>
+                                    <input type="radio" id="Feral cat" name="catType" value="Feral cat"/>
                                     <label for="Feral cat">Feral cat</label>
-                                    <input type="radio" id="house cat" name="type" value="house cat"/>
+                                    <input type="radio" id="house cat" name="catType" value="house cat"/>
                                     <label for="house cat">House cat</label>
-                                    <input type="radio" id="unknown" name="type" value="unknown"/>
+                                    <input type="radio" id="unknown" name="catType" value="unknown"/>
                                     <label for="other">Unknown</label> 
                                 </div>
                                 <div className="add-file-main">
                                 <label className="add-file" for="exampleInputFile">Add Photo</label>
-                                <input type="file" id="InputFile" name='photo' onChange={this.handleInput}/>
+                                <input type="file" id="InputFile" name='photo' onChange={this.handleImage}/>
                                 </div>
                             </div>
 

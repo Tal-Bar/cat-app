@@ -20,7 +20,7 @@ class App extends React.Component {
     this.state = {
       // activeUser: null,
       users: jasonUsers,
-      newECardData:null,
+      ECards:[],
       activeUser: {
         id: 1234,
         fname: "John",
@@ -31,7 +31,7 @@ class App extends React.Component {
     this.handleLogout = this.handleLogout.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
     this.updateNewEcard=this.updateNewEcard.bind(this)
-
+    this.handleStatus=this.handleStatus.bind(this)
   }
 
   handleLogin(activeUser) {
@@ -48,10 +48,19 @@ class App extends React.Component {
   }
   
   updateNewEcard(data){
-    console.log('calling from app.js',data)
-    this.setState({...this.state,newECardData:data,})
-  }
+       const  temp = [...this.state.ECards,data]
+      this.setState({ECards:temp})
 
+  }
+  handleStatus(status){
+    let length = this.state.ECards.length
+    const tempData = this.state.ECards[length-1]
+    tempData.status=status
+    const tempArr =this.state.ECards.slice(0,length-1)
+    tempArr.push(tempData)
+    this.setState({ECards:tempArr})
+  }
+  
   render() {
 
     const {activeUser, users} = this.state;
@@ -68,7 +77,7 @@ class App extends React.Component {
         <GuestHomePage activeUser={activeUser} handleLogout={this.handleLogout}/>
       </Route>
       <Route exact path="/home">
-        <UserHomePage activeUser={activeUser} handleLogout={this.handleLogout}/>
+        <UserHomePage activeUser={activeUser} handleLogout={this.handleLogout} ECards={this.state.ECards}/>
       </Route>
       <Route exact path="/login">
         <LoginPage activeUser={activeUser} users={users} handleLogin={this.handleLogin}/>
@@ -83,7 +92,7 @@ class App extends React.Component {
         <FCard activeUser={activeUser} handleLogout={this.handleLogout}/>
       </Route>
       <Route exact path="/new-e-card">
-        <NewECard activeUser={activeUser} handleLogout={this.handleLogout} newECardData={this.state.newECardData}/>
+        <NewECard activeUser={activeUser} handleLogout={this.handleLogout} handleStatus={this.handleStatus} newECardData={this.state.ECards[this.state.ECards.length-1]}/>
       </Route>
     </Switch>
     </HashRouter>

@@ -17,14 +17,14 @@ class PreviewCard extends Component {
 
             <div className="preview-card">
                 <div>
-                    <img src={data.img}/>
+                    <img src={data.photo}/>
                 </div>
                 <div>
                     <h3>{data.type}</h3>
-                    <p>Name: {data.fname} {data.lname}</p>
+                    <p>Name: {data.firstname} {data.lastname}</p>
                     <p>Location: {data.location} </p>
                     <p>Date: {data.date} </p>
-                    <p> {data.text}</p> 
+                    <p> {data.description}</p> 
                 </div>
             
             </div>

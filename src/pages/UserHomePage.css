@@ -6,4 +6,18 @@
 
 .two-btn {
     display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+.user-home-container .two-btn button{
+    margin: 0;
+}
+
+.user-home-container button{
+    width: 200px;
+    margin: 10px auto;
+}
+.all-cards-btn{
+
 }

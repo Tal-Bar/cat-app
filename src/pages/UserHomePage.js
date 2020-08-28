@@ -13,12 +13,12 @@ class UserHomePage extends Component {
         this.handleCard=this.handleCard.bind(this)
         this.handleToAllCards =this.handleToAllCards.bind(this)
         this.state ={
-            cardRoute:""
+            cardRoute:"",
+          
         }
         
     }
     handleCard(event){
-        console.log(event.target.value)
 
         this.setState({...this.state,cardRoute:event.target.value})
        
@@ -26,8 +26,9 @@ class UserHomePage extends Component {
     handleToAllCards(){
         this.setState({...this.state,cardRoute:'allCards'})
     }
+ 
     render() {
-        const {activeUser, handleLogout} = this.props;
+        const {activeUser, handleLogout,ECards} = this.props;
 
         if (!activeUser) {
             return <Redirect to="/"/>
@@ -44,19 +45,29 @@ class UserHomePage extends Component {
                 break;
         }
         return (
-            <div>
+            <div className="user-home-container">
                 <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout}/>
                 <div >
 
                     <div className="PreviewCards">
-                        { 
+
+                        {/* This is the cards dron the eCardJason: */}
+                        {/* { 
                         eCardsJson.map(data=>{
                             return <PreviewCard key={data.id} data ={data}/>
                             })
+                        } */}
+
+
+                        {ECards.filter(data=>data.status==='open').map((data,i)=>{
+                            return <PreviewCard key={i} data={data} />
+                        })
                         }
+
+
                     </div>
 
-                    <button onClick={this.handleToAllCards}>All Cards</button>
+                    <button className='all-cards-btn' onClick={this.handleToAllCards}>All Cards</button>
 
                     <div className="two-btn">
                         <select id = "new-card" onChange={this.handleCard}>
