@@ -10,7 +10,9 @@
         "text": "Hi, I need help, Cat stuck on the roof",
         "cat-age": "Adult",
         "cat-type": "Farel Cat",
-        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg"
+        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg",
+        "status":"open"
+        
     },
 
     {
@@ -24,7 +26,8 @@
         "text": "Hello, Who can help me get a cat out of a car engine?",
         "cat-age": "Unknown",
         "cat-type": "House cat",
-        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg"
+        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg",
+        "status":"open"
     },
 
     {
@@ -38,7 +41,8 @@
         "text": "Cat stuck on tree",
         "cat-age": "Kitten",
         "cat-type": "Unknown",
-        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg"
+        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg",
+        "status":"open"
     },
 
     {
@@ -52,7 +56,8 @@
         "text": "Cat stuck on tree",
         "cat-age": "Kitten",
         "cat-type": "Unknown",
-        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg"
+        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg",
+        "status":"open"
     }
 
 ]

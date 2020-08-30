@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route, HashRouter } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import LoginPage from './pages/loginPage';
 import GuestHomePage from './pages/GuestHomePage';
 import jasonUsers from './data/users.json';
@@ -9,8 +9,8 @@ import FCard from './pages/F-Card';
 import AllCards from './pages/AllCards';
 import ECardPage from './pages/E-card';
 import NewECard from './pages/NewEcard';
-
-
+import SignUp from './pages/SignUp'
+import UsersList from './pages/UsersList';
 
 class App extends React.Component {
 
@@ -18,20 +18,25 @@ class App extends React.Component {
     super(props);
     
     this.state = {
-      // activeUser: null,
+      activeUser: null,
+        // activeUser: {
+      //   id: 1234,
+      //   fname: "John",
+      //   lname: "Doe"
+      // }
       users: jasonUsers,
+      route:"",
       ECards:[],
-      activeUser: {
-        id: 1234,
-        fname: "John",
-        lname: "Doe"
-      }
+      userCards:[],
+      userCardIndex:0
     }
 
     this.handleLogout = this.handleLogout.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
     this.updateNewEcard=this.updateNewEcard.bind(this)
     this.handleStatus=this.handleStatus.bind(this)
+    this.updateUserCards=this.updateUserCards.bind(this)
+    this.onCardSelect=this.onCardSelect.bind(this)
   }
 
   handleLogin(activeUser) {
@@ -52,25 +57,36 @@ class App extends React.Component {
       this.setState({ECards:temp})
 
   }
-  handleStatus(status){
-    let length = this.state.ECards.length
-    const tempData = this.state.ECards[length-1]
-    tempData.status=status
-    const tempArr =this.state.ECards.slice(0,length-1)
-    tempArr.push(tempData)
+  handleStatus(status,card){
+    let tempArr =[...this.state.ECards]
+    tempArr.forEach(cardItem=>{
+      if(card==cardItem){
+        cardItem.status=status
+      }
+    })
     this.setState({ECards:tempArr})
   }
   
+  updateUserCards(data){
+    const temp=[...this.state.userCards,data]
+    this.setState({userCards:temp})
+  } 
+
+  onCardSelect(card){
+    let index =this.state.ECards.indexOf(card)
+    this.props.history.push('/new-e-card')
+  }
+
   render() {
 
     const {activeUser, users} = this.state;
 
-
+    
   return (
     
-  <div>
     
-    <HashRouter>
+  <div>
+   
    
     <Switch>
       <Route exact path="/">
@@ -83,7 +99,7 @@ class App extends React.Component {
         <LoginPage activeUser={activeUser} users={users} handleLogin={this.handleLogin}/>
       </Route>    
       <Route exact path="/cards">
-        <AllCards activeUser={activeUser} handleLogout={this.handleLogout}/>
+        <AllCards activeUser={activeUser} handleLogout={this.handleLogout} ECards={this.state.ECards} onCardSelect={this.onCardSelect}/>
       </Route>
       <Route exact path="/e-card">
         <ECardPage activeUser={activeUser} handleLogout={this.handleLogout} updateNewEcard={this.updateNewEcard}/>
@@ -92,14 +108,19 @@ class App extends React.Component {
         <FCard activeUser={activeUser} handleLogout={this.handleLogout}/>
       </Route>
       <Route exact path="/new-e-card">
-        <NewECard activeUser={activeUser} handleLogout={this.handleLogout} handleStatus={this.handleStatus} newECardData={this.state.ECards[this.state.ECards.length-1]}/>
+        <NewECard activeUser={activeUser} handleLogout={this.handleLogout} handleStatus={this.handleStatus} newECardData={this.state.ECards[this.state.userCardIndex]}/>
+      </Route>
+      <Route exact path="/users-list">
+        <UsersList activeUser={activeUser} handleLogout={this.handleLogout} userCards={this.state.userCards}/>
+      </Route>
+      <Route exact path="/signup">
+        <SignUp activeUser={activeUser} handleLogout={this.handleLogout} updateUserCards={this.updateUserCards}/>
       </Route>
     </Switch>
-    </HashRouter>
   </div>
     
   );
 }
 }
 
-export default App;
+export default withRouter(App);

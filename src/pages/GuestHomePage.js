@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import RecipesNavbar from '../conponents/RecipesNavbar';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import './GuestHomePage.css'
 
 
@@ -26,8 +26,9 @@ constructor(props) {
                     
                     <div className="GuestHomePage">
                         <h1>Welcome</h1>
-                    
+                    <Link to ='/signup'>
                     <button>Join Us</button>
+                    </Link>
                     </div>
                 </div>
             );

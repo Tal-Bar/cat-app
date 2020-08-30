@@ -2,16 +2,21 @@
     background-color: chocolate;
     width: 550px;
     height:auto;
-}
+} 
 
 .new-e-card-container {
     display: flex;
 }
 
-label{
+.new-e-first-col label{
     display: block;
     margin: 10px;
     color: white;
+} 
+
+.new-e-second-col img{
+width: 200px;
+max-height: 400px;
 }
 
 #status *{

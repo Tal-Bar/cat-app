@@ -6,6 +6,7 @@ import ECards from '../conponents/ECards';
 import FCards from '../conponents/FCards';
 import fCardsJson from '../data/fCards.json'
 import './AllCards.css'
+import ECardPage from './E-card';
 
 class AllCards extends Component {
 
@@ -16,7 +17,7 @@ class AllCards extends Component {
     }
     
     render() {
-        const {activeUser, handleLogout} = this.props;
+        const {activeUser, handleLogout,ECards:eCardsList} = this.props;
 
         // if (!activeUser) {
         //     return <Redirect to="/"/>
@@ -37,6 +38,11 @@ class AllCards extends Component {
                      {
                         fCardsJson.map(card =>{
                            return <FCards key={card.id} data={card}  /> 
+                        })
+                    }
+                    {
+                        eCardsList.map((card,i)=>{
+                            return <ECards key={card.name+i} data={card} onClick={()=>this.props.onCardSelect(card)}/>
                         })
                     }
                 </div>

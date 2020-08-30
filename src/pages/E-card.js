@@ -42,15 +42,15 @@ class ECardPage extends Component {
     RedirectToNewECard(){
         //function to callect all the data we entered
         const data ={
-            firstname:this.state.firstname,
-            lastname:this.state.lastname,
+            ftname:this.state.firstname,
+            lname:this.state.lastname,
             location:this.state.location,
             phone:this.state.phone,
             date:this.state.date,
             description:this.state.description,
-            age:this.state.catAge,
-            type:this.state.catType,
-            photo:this.state.photo,
+            'cat-age':this.state.catAge,
+            "cat-type":this.state.catType,
+            img:this.state.photo,
             status:this.state.status
         }
         this.props.updateNewEcard(data)

@@ -1,19 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    background: url(cat10.jpg) no-repeat;
-    background-size: cover;
-    height: 100vh;
-    color: red;
-    
-    /* background-image: no-repeat; */
-    /* background-position: center; */
-  
-}
+
+
+
 
 .form-title {
     width: 800px;

@@ -4,13 +4,17 @@
         "fname": "John",
         "lname": "Doe",
         "email": "john@john.com",
-        "pwd": "123"
+        "pwd": "123",
+        "img": "https://media1.popsugar-assets.com/files/thumbor/8QCfbBsz_Tt7-Zavrc_q6rSrF9Q/356x1145:1857x2646/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/09/04/970/n/1922398/cc3fa7b15d70381d55bd82.88203803_/i/Brad-Pitt.jpg",
+        "type":"feeder"
     },
     {
         "id": 2,
         "fname": "Sara",
         "lname": "Doe",        
         "email": "sara@sara.com",
-        "pwd": "123"
+        "pwd": "123",
+        "img":"https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE4MDAzNDEwNzQzMTY2NDc4/will-smith-9542165-1-402.jpg",
+        "type":"feeder"
     }
 ]

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RecipesNavbar from '../conponents/RecipesNavbar';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import PreviewCard from '../conponents/PreviewCard';
 import eCardsJson from '../data/eCards.json'
 import './UserHomePage.css'
@@ -79,8 +79,10 @@ class UserHomePage extends Component {
                         <option value="I">I</option>
                         <option value="J">J</option>
                         </select>
+                        <Link to ='/users-list'>
 
                         <button>Users List</button>
+                        </Link>
                     </div>
 
                 </div>

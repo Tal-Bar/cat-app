@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './loginPage.css'
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 
 class LoginPage extends Component {
@@ -54,7 +54,7 @@ if (redirectToRecipes) {
         return (
             <div className="p-login">
                 <h2>Login to Recipe Book</h2>
-                <div>or <a href="#/sighup">Create a new account</a></div>
+                <div>or<Link to ='/signup'> Create a new account</Link></div>
 
                 <form className="loginForm">
 

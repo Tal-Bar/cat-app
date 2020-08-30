@@ -11,7 +11,8 @@
         "feedind-time": "Adult",
         "number-of-cats": "Farel Cat",
         "text": "bla bla",
-        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg"
+        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg",
+        "status":"open"
     },
 
     {
@@ -26,7 +27,8 @@
         "feedind-time": "Adult",
         "number-of-cats": "Farel Cat",
         "text": "bla bla",
-        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg"
+        "img": "https://i.dailymail.co.uk/i/pix/2014/09/09/article-2749382-2134F87A00000578-116_306x547.jpg",
+        "status":"open"
     }
 
 
