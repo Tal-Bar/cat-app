@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import './SignUp.css'
-import { Redirect, Link } from 'react-router-dom';
+import { Redirect, Link, withRouter } from 'react-router-dom';
 
 
 class SignUp extends Component {
@@ -14,7 +14,8 @@ constructor(props){
         pwd:'',
         img:'',
         email:'',
-        type:''
+        type:'',
+        showInvalidCredentials: false,
 
     }
     this.handleInput=this.handleInput.bind(this)
@@ -39,15 +40,21 @@ handleImage(event){
 }
 
 handleSignUpSubmit(){
-   const data={
-       fname:this.state.fname,
-       lname:this.state.lname,
-       email:this.state.email,
-       pwd:this.state.pwd,
-       img:this.state.img,
-       type:this.state.type
-   }
-   this.props.updateUserCards(data)
+    if(this.state.email=='' || this.state.pwd==''){
+        this.setState({showInvalidCredentials:true})
+    }else{
+        const data={
+           fname:this.state.fname,
+           lname:this.state.lname,
+           email:this.state.email,
+           pwd:this.state.pwd,
+           img:this.state.img,
+           type:this.state.type
+       }
+       this.props.updateUserCards(data)
+       this.props.history.push('/login')
+    }
+   
 }
 
     render() {
@@ -60,6 +67,11 @@ handleSignUpSubmit(){
             <div className="signup-wrapper">
                     <div className="signup-container">
                         <h2>Sign Up</h2>
+                            {
+                                this.state.showInvalidCredentials ? <div className="alert">
+                                <div>Please Enter email and password!</div>
+                                </div> : null
+                            }
                         <div className="inp-container">
                             <label>First Name</label>
                             <input name='fname' type="text" onChange={this.handleInput}/>
@@ -90,9 +102,8 @@ handleSignUpSubmit(){
                                                 <input type="radio" id="Cat-carer" name="type" value="Cat-carer"/>
                                                 <label for="other">Cat-Foster</label> 
                                             </div>
-                            <Link to='/login' onClick={this.handleSignUpSubmit}>
-                                <button className="signup-btn">OK</button>
-                            </Link>
+                           
+                                <button className="signup-btn"  onClick={this.handleSignUpSubmit}>OK</button>
                     </div>
             </div>
             
@@ -101,4 +112,4 @@ handleSignUpSubmit(){
     }
 }
 
-export default SignUp;
+export default withRouter(SignUp);
