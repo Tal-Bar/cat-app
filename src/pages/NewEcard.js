@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './NewEcard.css'
 import { Redirect } from 'react-router-dom';
-import RecipesNavbar from '../conponents/RecipesNavbar';
+import Navbar from '../conponents/Navbar';
 class NewECard extends Component {
     constructor(props){
         super(props)
@@ -19,8 +19,10 @@ class NewECard extends Component {
                 }
 
         return (
-            <div className='newEContainer'>
-             <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout}/>
+
+            <div>
+                <Navbar activeUser={activeUser} handleLogout={handleLogout}/>
+                <div className='newEContainer'>
             <div className="new-e-card-container">
                 <div className='new-e-first-col'>
                     <label>Name: {newECardData.ftname}</label> 
@@ -39,13 +41,15 @@ class NewECard extends Component {
                 <h3>Status</h3>
                 <div id="status" onChange={(event)=>handleStatus(event.target.value,newECardData)} ref={this.radioInput}>
                     <label>Open</label>
-                    <input type="radio" name="status" value='open' id="open"/>
+                    <input type="radio" name="status" value='open' id="open"  defaultChecked={newECardData.status==='open'} />
                     <label >Active</label>
-                    <input type="radio" name="status" value='active' id="active"/>
+                    <input type="radio" name="status" value='active' id="active"  defaultChecked={newECardData.status==='active'} />
                     <label>Closed</label>
-                    <input type="radio" name="status" value='closed' id="closed"/>
+                    <input type="radio" name="status" value='closed' id="closed"  defaultChecked={newECardData.status==='closed'} />
                 </div>
             </div>
+            </div>
+           
         );
     }
 }

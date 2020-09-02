@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react';
-import RecipesNavbar from '../conponents/RecipesNavbar';
+import Navbar from '../conponents/Navbar';
 import { Redirect, Link } from 'react-router-dom';
 import './GuestHomePage.css'
 
@@ -22,13 +22,16 @@ constructor(props) {
 
             return (
                 <div >
-                    <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout}/>
-                    
+                    <Navbar activeUser={activeUser} handleLogout={handleLogout}/>
+
+                    <div className="test">
                     <div className="GuestHomePage">
-                        <h1>Welcome</h1>
-                    <Link to ='/signup'>
-                    <button>Join Us</button>
-                    </Link>
+                        <h1>STREET CAT</h1>
+                       
+                        <Link to ='/signup'>
+                        <button >Join Us</button>
+                        </Link>
+                    </div>
                     </div>
                 </div>
             );

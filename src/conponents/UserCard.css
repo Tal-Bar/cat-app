@@ -4,7 +4,12 @@
     padding: 10px;
     width: 350px;
     height: auto;
+    color: black;
 }
 .user-card-container img{
     width: 200px;
+}
+
+.user-card-container label {
+    display: block;
 }

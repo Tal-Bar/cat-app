@@ -6,9 +6,48 @@
 }
 
 body {
-  background: url(/pages/cat10.jpg) no-repeat;
+  background: url(pages/cat10.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
   color: red;
   
+}
+
+a{
+  color: #f44336;
+  padding: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  outline: none;
+ 
+}
+
+
+
+.btn-main {
+  display: block;
+  width: 80%;
+  margin: 20px 0px 20px 0px;
+  margin: auto;
+  text-align: center;
+  font-size: x-large;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #f4511e; 
+  color: white;
+  padding: 16px 32px;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+  outline: none;
+}
+
+.btn-main:hover {
+  opacity: 1;
+  background-color: #e9c8a2;
+  outline: none;
 }

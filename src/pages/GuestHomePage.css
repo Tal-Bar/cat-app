@@ -1,12 +1,55 @@
 
 
-
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+    /* background: rgb(220,220,220, 0.4);   */
+    
+    
+}
 
 
 .GuestHomePage {
     
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    justify-content: center;
+    align-items: center;  
+    padding-top: 20%;
+    /* background: rgb(220,220,220, 0.1);  */
+    /* background: rgb(220,220,220, 0.4);  */
     
 }
+
+.GuestHomePage h1 {
+    font-size: 100px;
+    color: #f4511e;
+    text-shadow: 0.5px 0.5px black;
+    /* background: rgb(220,220,220, 0.4);   */
+}
+
+.GuestHomePage button {
+   
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #f4511e; 
+    padding: 16px 32px;
+    font-size: 20px;
+    opacity: 1;
+    transition: 0.3s;
+    
+}
+
+
+.GuestHomePage button:hover {
+    opacity: 1;
+    background-color: black;
+   color: white;
+}
+
+
+

@@ -1,4 +1,4 @@
-.newEContainer{
+.newFContainer{
     background-color: chocolate;
     width: 550px;
     height: 500px;
@@ -8,17 +8,17 @@
     left: 50%;
 } 
 
-.new-e-card-container {
+.new-f-card-container {
     display: flex;
 }
 
-.new-e-first-col label{
+.new-f-first-col label{
     display: block;
     margin: 10px;
     color: white;
 } 
 
-.new-e-second-col img{
+.new-f-second-col img{
 width: 200px;
 max-height: 400px;
 }

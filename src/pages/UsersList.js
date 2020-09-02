@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RecipesNavbar from '../conponents/RecipesNavbar';
+import Navbar from '../conponents/Navbar';
 import { Redirect } from 'react-router-dom';
 import './UsersList.css'
 import usersJson from '../data/users.json'
@@ -13,7 +13,7 @@ class UsersList extends Component {
         this.state={
             userCards:[],
             searchText:'',
-            searchTypeRadio:'feeder'
+            searchTypeRadio:null
         }
         this.handleSearch=this.handleSearch.bind(this)
         this.handleRadio=this.handleRadio.bind(this)
@@ -29,7 +29,9 @@ class UsersList extends Component {
     }
 
     componentDidMount(){
-        this.setState({userCards:[...usersJson,...this.props.userCards]})
+        this.setState({userCards:[...usersJson,...this.props.userCards]},()=>{
+            console.log('userList state',this.state.userCards)
+        })
     }
     render() {
         const {activeUser, handleLogout,userCards} = this.props;
@@ -42,31 +44,39 @@ class UsersList extends Component {
       
         return (
             <div>
-                <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout}/>
-                <div>
-               UsersList Page
-                </div>
-                <div>
+                <Navbar activeUser={activeUser} handleLogout={handleLogout}/>
+                <div className="user-list-main">
+              
+                <div className="filter-user-list">
                     <input type="text" onChange={this.handleSearch}/>
                     <div className="user-radio-container" onChange={this.handleRadio}>
-                        <label>feeder</label>
-                        <input type="radio" name="searchTypeRadio" value='feeder' defaultChecked={true} />
+                        <label>Cat-Feeder</label>
+                        <input type="radio" name="searchTypeRadio" value='feeder' />
                         <label>Cat-Catcher</label>
                         <input type="radio" name="searchTypeRadio" value='Cat-Catcher'/>
-                        <label>Cat-carer</label>
+                        <label>Cat-Foster</label>
                         <input type="radio" name="searchTypeRadio" value='Cat-carer'/>
 
                     </div>
+
+
+
                 </div>
+
+
                 <div className ="users-container">
                   {
                      this.state.userCards.filter(user=>{
-                         if(user.fname.toLowerCase().includes(this.state.searchText.toLowerCase())&& user.type===this.state.searchTypeRadio){
+                         if(user.fname.toLowerCase().includes(this.state.searchText.toLowerCase())){
+                            if(!this.state.searchTypeRadio){
+                                return true
+                            }
+                            if(( user.type===this.state.searchTypeRadio))
                              return true
                          }
                          
                      }).map((user,i)=>{
-                          return <UserCard key={user.name+i} user={user}/>
+                          return <UserCard key={user.fname+i} user={user}/>
                       })
                   }
                 {/*   {
@@ -76,6 +86,7 @@ class UsersList extends Component {
                   }  */}
                 </div>
                 
+            </div>
             </div>
         );
     }

@@ -14,7 +14,7 @@ class FCards extends Component {
         // this.props.data
         return (
             
-            <div className="f-card-wrapper">
+            <div className="f-card-wrapper" {...this.props}>
                 <div className="fcards-container">
                     <div className="fcard-card">
                         <div className="imgBx">
@@ -27,7 +27,7 @@ class FCards extends Component {
                             <p>From: {data.from} </p>
                             <p>To: {data.to} </p>
                             <p>Feeding Time:{data["feeding-time"]}</p>
-                            <p>Number of Cats:{data["number of cats"]}</p>
+                            <p>Number of Cats:{data["number-of-cats"]}</p>
                             <p>Phone:{data.phone}</p>
                             <p> {data.text}</p> 
                         </div>

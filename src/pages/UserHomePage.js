@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RecipesNavbar from '../conponents/RecipesNavbar';
+import Navbar from '../conponents/Navbar';
 import { Redirect, Link } from 'react-router-dom';
 import PreviewCard from '../conponents/PreviewCard';
 import eCardsJson from '../data/eCards.json'
@@ -45,9 +45,9 @@ class UserHomePage extends Component {
                 break;
         }
         return (
-            <div className="user-home-container">
-                <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout}/>
-                <div >
+            <div >
+                <Navbar activeUser={activeUser} handleLogout={handleLogout}/>
+                <div className="user-home-container">
 
                     <div className="PreviewCards">
 
@@ -67,22 +67,30 @@ class UserHomePage extends Component {
 
                     </div>
 
+
                     <button className='all-cards-btn' onClick={this.handleToAllCards}>All Cards</button>
+                    
 
                     <div className="two-btn">
-                        <select id = "new-card" onChange={this.handleCard}>
+                       
+                    <select id = "new-card" className="new-card-btn" onChange={this.handleCard}>
                         <option selected disabled hidden >Open a New card</option>
-                        <option value="E">E</option>
-                        <option value="F">F</option>
-                        <option value="G">G</option>
-                        <option value="H">H</option>
-                        <option value="I">I</option>
-                        <option value="J">J</option>
+                        <option value="E">Trap a Cat</option>
+                        <option value="F">Shift Change in Feeding Station</option>
+                        <option value="G">Foster Home Needed</option>
+                        <option value="H">Medicine Needed</option>
+                        <option value="I">Equipment Needed</option>
+                        <option value="J">Other</option>
                         </select>
-                        <Link to ='/users-list'>
 
-                        <button>Users List</button>
+                        <Link to ='/users-list' className="link">
+                        <button className="user-list-btn">Users List</button>
                         </Link>
+
+
+                        
+                        
+                       
                     </div>
 
                 </div>

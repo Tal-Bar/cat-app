@@ -1,6 +1,30 @@
+
+
+.user-list-main {
+    background-color: black;
+}
+
 .user-radio-container label{
-    color: black;
-}
-.user-radio-container{
+    color: red;
+} 
+ .user-radio-container{
     display: flex;
+    
+} 
+
+
+ .user-list-main {
+    padding-top: 100px;
 }
+
+.users-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.filter-user-list input {
+    margin: 10px;
+}
+

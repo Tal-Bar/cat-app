@@ -52,36 +52,46 @@ if (redirectToRecipes) {
 }
 
         return (
-            <div className="p-login">
-                <h2>Login to Recipe Book</h2>
+
+            <div className="login-wrapper">
+            <div className="login-container">
+                <h2>Login to Street Cat</h2>
                 <div>or<Link to ='/signup'> Create a new account</Link></div>
 
                 <form className="loginForm">
 
                 {showInvalidCredentials ? <div class="alert">
-                {/* <strong>Invalid Credientails! Incorrect email or password</strong>  */}
+                
                     <div>Incorrect email or password!</div>
                 </div> : null}
 
 
-                    <div>
+                    <div className="login-inp-container">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="text" id="exampleInputEmail1" placeholder="example@gmail.com" value={emailInput} onChange={(e) => this.setState({emailInput: e.target.value, showInvalidCredentials: false})}/>
                     </div>
-                    <div >
+                    <div className="login-inp-container">
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" id="exampleInputPassword1" placeholder="******" value={pwdInput} onChange={(e) => this.setState({pwdInput: e.target.value})}/>
                     </div>
-                    <label for="exampleInputFile">File input</label>
+                    {/* <label for="exampleInputFile">File input</label>
                     <input type="file" id="exampleInputFile"/>
                     <input type="checkbox" id="CheckMe"/>
-                    <label for="CheckMe">I agree to receive information about Canonical’s products and services.</label>
+                    <label for="CheckMe">I agree to receive information about Canonical’s products and services.</label> */}
                     <div >
-                        <button onClick={this.login}type="button">Log in</button>
+                        <button className="login-btn" onClick={this.login}type="button">Log in</button>
                     </div>
                 </form>
                 
             </div>
+            </div>
+
+
+
+
+
+
+
         );
     }
 }

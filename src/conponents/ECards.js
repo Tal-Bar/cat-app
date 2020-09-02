@@ -14,8 +14,8 @@ class ECards extends Component {
         // this.props.data
         return (
             
-            <div className="e-card-wrapper" {...this.props}>
-                <div className="ecards-container">
+            // <div className="e-card-wrapper" >
+                <div className="ecards-container" {...this.props}>
                     <div className="ecard-card">
                         <div className="imgBx">
                             <img src={data.img}/>
@@ -34,7 +34,7 @@ class ECards extends Component {
                     </div>
                 </div>
                   
-            </div>
+            // </div>
 
 
 

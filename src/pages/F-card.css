@@ -1,6 +1,11 @@
 
+.fcard-main {
+    display: flex;
+}
+
 #fcard {
     color: white;
+    
 }
 
 .form-title2 {
@@ -9,25 +14,29 @@
     justify-content: center;
     max-width: 550px;
     margin: 0 auto;
-    background: rgb(220,220,220, 0.7); 
-    margin-bottom: 30px;
+    /* background: rgb(220,220,220, 0.7);  */
+    margin-bottom: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 30);
-    padding: 15px;
+    background-color: #f4511e; ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+    padding: 10px;
+    text-align: center; 
+    color: white;
+    text-shadow: 0.2px 0.2px black;
+    
 }
 
-.form-title2 h2 {
-    text-align: center;   
-}
 
 
 
-.wrapper {
+
+.f-wrapper {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-47%);
     width: 100%;
     padding: 0 20px; 
+  
 }
 
 
@@ -38,11 +47,20 @@
     margin: 0 auto;
     /* background: rgba(0, 0, 0, 0.7); */
     background: rgb(220,220,220, 0.2); 
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
     border-radius: 5px;
     display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, 30);
-    /* text-shadow: -1.0px 0 black; */
+    /* text-shadow: -1.0px 0 black;  */
+    flex-direction: column;
+    text-shadow: 0.2px 0.2px black;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    
+    
 }
 
 .input-fields {
@@ -93,24 +111,35 @@
     text-transform: uppercase;
 } */
 
-.btn {
+.f-btn {
+
+    display: block;
+    width: 80%;
+    margin: auto;
     text-align: center;
-    padding: 15px;
+    font-size: x-large;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #f4511e; 
+    color: white;
+    padding: 16px 32px;
+    font-size: 16px;
+    opacity: 1;
+    transition: 0.3s;
     margin-top: 37px;
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: #f4511e; 
-    color: white;
-    font-size: 16px;
-    opacity: 1;
-    transition: 0.3s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
 }
 
-.btn:hover {
+.f-btn:hover {
     opacity: 1;
     background-color: #b42a00; 
+    /* background-color: black; */
+    opacity: 1;
+    /* outline: none; */
     /* outline: none; */
     /* border: 1px solid #e9c8a2; */
 }

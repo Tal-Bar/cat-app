@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RecipesNavbar from '../conponents/RecipesNavbar';
+import Navbar from '../conponents/Navbar';
 import { Redirect } from 'react-router-dom';
 import './E-card.css'
 
@@ -70,7 +70,7 @@ class ECardPage extends Component {
         }
         return (
             <div>
-                 <RecipesNavbar activeUser={activeUser} handleLogout={handleLogout}/>
+                 <Navbar activeUser={activeUser} handleLogout={handleLogout}/>
                 <div>
                     <div className="form-title"><h1>E-card form</h1></div>
                     <div className="main">
@@ -130,7 +130,7 @@ class ECardPage extends Component {
 
                                 
                             
-                            <button type="button" onClick={this.RedirectToNewECard}>Send</button> 
+                            <button className='btn-main' type="button" onClick={this.RedirectToNewECard}>Send</button> 
 
                                 {/* <h2 >Subject</h2>
                             <select className="option" name="subject">
