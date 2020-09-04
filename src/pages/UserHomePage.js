@@ -68,12 +68,13 @@ class UserHomePage extends Component {
                     </div>
 
 
-                    <button className='all-cards-btn' onClick={this.handleToAllCards}>All Cards</button>
                     
+                    <button className='all-cards-btn' onClick={this.handleToAllCards}>All Cards</button>
 
                     <div className="two-btn">
                        
                     <select id = "new-card" className="new-card-btn" onChange={this.handleCard}>
+                    
                         <option selected disabled hidden >Open a New card</option>
                         <option value="E">Trap a Cat</option>
                         <option value="F">Shift Change in Feeding Station</option>

@@ -1,11 +1,12 @@
 .newFContainer{
-    background-color: chocolate;
+    background-color: #f4511e; 
     width: 550px;
     height: 500px;
     /* height:auto; */
     position: absolute;
     top: 20%;
     left: 50%;
+    
 } 
 
 .new-f-card-container {
@@ -15,7 +16,8 @@
 .new-f-first-col label{
     display: block;
     margin: 10px;
-    color: white;
+    
+    color: black;
 } 
 
 .new-f-second-col img{

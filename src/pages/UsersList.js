@@ -43,19 +43,22 @@ class UsersList extends Component {
         
       
         return (
-            <div>
+            <div className="test6">
                 <Navbar activeUser={activeUser} handleLogout={handleLogout}/>
                 <div className="user-list-main">
               
                 <div className="filter-user-list">
-                    <input type="text" onChange={this.handleSearch}/>
+                    <input type="text" onChange={this.handleSearch} placeholder="Search User"/>
                     <div className="user-radio-container" onChange={this.handleRadio}>
-                        <label>Cat-Feeder</label>
+                        
                         <input type="radio" name="searchTypeRadio" value='feeder' />
-                        <label>Cat-Catcher</label>
+                        <label>Cat-Feeder</label>
+                        
                         <input type="radio" name="searchTypeRadio" value='Cat-Catcher'/>
-                        <label>Cat-Foster</label>
+                        <label>Cat-Catcher</label>
+                        
                         <input type="radio" name="searchTypeRadio" value='Cat-carer'/>
+                        <label>Cat-Foster</label>
 
                     </div>
 
