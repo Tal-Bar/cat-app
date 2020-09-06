@@ -1,0 +1,62 @@
+.navbar-main {
+  background: #f4511e;
+}
+body .navbar-main .logo-title {
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+.navbar-main a {
+  color: rgb(255, 255, 255);
+  vertical-align: sub;
+  margin: 10px;
+}
+
+.navbar-main a:hover {
+  color: black;
+  text-decoration: none;
+  background-color: lightblue;
+}
+
+/* .new-navbar {
+  position: absolute;
+  width: 100%;
+} */
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+ul.topnav li a.active {
+  background-color: #f4511e;
+}
+
+ul.topnav li.right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {
+    float: none;
+  }
+}

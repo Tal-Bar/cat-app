@@ -1,104 +1,85 @@
-
 .fcard-main {
-    display: flex;
+  display: flex;
 }
 
 #fcard {
-    color: white;
-    
+  color: white;
 }
 
 .form-title2 {
-   
-    display: flex;
-    justify-content: center;
-    max-width: 550px;
-    margin: 0 auto;
-    /* background: rgb(220,220,220, 0.7);  */
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background-color: #f4511e; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
-    padding: 10px;
-    text-align: center; 
-    color: white;
-    text-shadow: 0.2px 0.2px black;
-    
+  display: flex;
+  justify-content: center;
+  max-width: 550px;
+  margin: 0 auto;
+  /* background: rgb(220,220,220, 0.7);  */
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #f4511e;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+  padding: 10px;
+  text-align: center;
+  color: white;
+  text-shadow: 0.2px 0.2px black;
 }
-
-
-
-
 
 .f-wrapper {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-47%);
-    width: 100%;
-    padding: 0 20px; 
-  
+  margin: 10px auto;
 }
 
-
-
-
 .contact-form {
-    max-width: 550px;
-    margin: 0 auto;
-    /* background: rgba(0, 0, 0, 0.7); */
-    background: rgb(220,220,220, 0.2); 
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
-    border-radius: 5px;
-    display: flex;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 30);
-    /* text-shadow: -1.0px 0 black;  */
-    flex-direction: column;
-    text-shadow: 0.2px 0.2px black;
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
-    
-    
+  max-width: 550px;
+  margin: 2rem auto;
+  background: rgb(220, 220, 220, 0.2);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 30);
+  flex-direction: column;
+  text-shadow: 0.2px 0.2px black;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
 }
 
 .input-fields {
-    display: flex;
-    flex-direction: column;
-    margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
 }
 
-.input-fields, .msg {
-    width: 48%;
+.input-fields,
+.msg {
+  width: 48%;
 }
 
-.input-fields .input, .msg textarea {
-    margin: 10px 0;
-    /* background: transparent; */
-    border: 0;
-    /* border-bottom: 2px solid orangered; */
-    outline: none;
-    padding: 10px;
-    width: 100%; 
-    border-radius: 5px; 
-    
+.input-fields .input,
+.msg textarea {
+  margin: 10px 0;
+  /* background: transparent; */
+  border: 0;
+  /* border-bottom: 2px solid orangered; */
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .msg textarea {
-    height: 70%;
+  height: 70%;
 }
 
 ::-webkit-input-placeholder {
-    color: black;
+  color: black;
 }
 
 ::-moz-input-placeholder {
-    color: black;
+  color: black;
 }
 
 ::-ms-input-placeholder {
-    color: black;
+  color: black;
 }
 
 /* .btn {
@@ -112,51 +93,49 @@
 } */
 
 .f-btn {
-
-    display: block;
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    font-size: x-large;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: #f4511e; 
-    color: white;
-    padding: 16px 32px;
-    font-size: 16px;
-    opacity: 1;
-    transition: 0.3s;
-    margin-top: 37px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+  display: block;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: x-large;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #f4511e;
+  color: white;
+  padding: 16px 32px;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+  margin-top: 37px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .f-btn:hover {
-    opacity: 1;
-    background-color: #b42a00; 
-    /* background-color: black; */
-    opacity: 1;
-    /* outline: none; */
-    /* outline: none; */
-    /* border: 1px solid #e9c8a2; */
+  opacity: 1;
+  background-color: #b42a00;
+  /* background-color: black; */
+  opacity: 1;
+  /* outline: none; */
+  /* outline: none; */
+  /* border: 1px solid #e9c8a2; */
 }
 
 @media screen and (max-width: 600px) {
-    .contact-form {
-        flex-direction: column;
-    }
-    .form-title2 {
-        flex-direction: column;
-    }
-    .msg textarea {
-        height: 80px;
-    }
-    .input-fields,
-    .msg {
-        width: 100%;
-    }
+  .contact-form {
+    flex-direction: column;
+  }
+  .form-title2 {
+    flex-direction: column;
+  }
+  .msg textarea {
+    height: 80px;
+  }
+  .input-fields,
+  .msg {
+    width: 100%;
+  }
 }
-

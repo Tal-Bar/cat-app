@@ -1,81 +1,83 @@
+.user-home-container {
+  padding-top: 100px;
+}
+.user-home-container h2 {
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+}
 .PreviewCards {
-    display: flex;
-    margin: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: center;
+  height: auto;
+  min-height: 63vh;
 }
 
-.two-btn {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 200px;
-    width: auto;
-    /* background-color: red;
-    padding: 20px; */
+.user-home-btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70vw;
+  margin: 0 auto;
 }
 
 /* .user-home-container .two-btn button{
     margin: 0;
 } */
 
-.user-home-container button{
-    width: 200px;
-    /* margin: 10px auto; */
+.user-home-container button {
+  width: 200px;
+  margin: 20px 20px;
+  /* margin: 10px auto; */
 }
 
-.user-home-container {
-    padding-top: 100px;
-    display: flex;
-    justify-content: center;
+.link:hover {
+  text-decoration: none;
 }
 
-
-
-  .link:hover {
-    text-decoration: none;
-  }
-
-  .new-card-btn option {
-      text-align: center;
-      color: black;
-      background: rgb(220,220,220, 0.5); 
-      cursor: pointer; 
-  }
-
- 
-
- 
-
-
-
-
-.all-cards-btn, .user-list-btn, .new-card-btn {
-
-    display: block;
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    font-size: x-large;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: #f4511e; 
-    color: white;
-    padding: 16px 32px;
-    font-size: 16px;
-    opacity: 1;
-    transition: 0.3s;
-    /* margin-top: 37px; */
-    border-radius: 5px;
-    cursor: pointer;
-    /* text-transform: uppercase; */
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
-    
+.new-card-btn option {
+  text-align: center;
+  color: black;
+  background: rgb(220, 220, 220, 0.5);
+  cursor: pointer;
+}
+.user-home-btn-container .new-card-btn {
+  width: 100%;
+  max-width: 300px;
+  margin: auto 20px;
+}
+.all-cards-btn,
+.user-list-btn,
+.new-card-btn {
+  display: block;
+  /* margin: auto; */
+  text-align: center;
+  font-size: x-large;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #f4511e;
+  color: white;
+  padding: 16px 32px;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+  /* margin-top: 37px; */
+  border-radius: 5px;
+  cursor: pointer;
+  /* text-transform: uppercase; */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.all-cards-btn:hover, .user-list-btn:hover, .new-card-btn:hover {
-    opacity: 1;
-    background-color: black;
-    opacity: 1;
-    
+.all-cards-btn:hover,
+.user-list-btn:hover,
+.new-card-btn:hover {
+  opacity: 1;
+  background-color: black;
+  opacity: 1;
 }

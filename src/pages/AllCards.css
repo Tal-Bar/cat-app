@@ -1,7 +1,13 @@
-.cards-container{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding-top: 100px;
-    background-color: black;
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 100px;
+  background-color: #000000;
+  min-height: 100vh;
+  height: auto;
+}
+
+.cards-container h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
 }

@@ -1,30 +1,39 @@
-.newFContainer{
-    background-color: #f4511e; 
-    width: 550px;
-    height: 500px;
-    /* height:auto; */
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    
-} 
-
+.newFContainer {
+  background-color: rgb(26, 26, 26);
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  margin: 2rem auto;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgb(5, 5, 5);
+}
+.newFContainer h2 {
+  padding: 10px;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  background: #f4511e;
+  border-radius: 7px;
+}
 .new-f-card-container {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.newFContainer h3 {
+  padding: 10px;
+}
+.new-f-first-col label {
+  font-size: 1.4rem;
+  display: block;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
 }
 
-.new-f-first-col label{
-    display: block;
-    margin: 10px;
-    
-    color: black;
-} 
-
-.new-f-second-col img{
-width: 200px;
-max-height: 400px;
-}
-
-#status *{
-    display: inline;
+.new-f-second-col img {
+  width: 200px;
+  max-height: 400px;
+  padding: 10px;
 }
