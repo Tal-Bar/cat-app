@@ -14,7 +14,7 @@ body .navbar-main .logo-title {
 .navbar-main a:hover {
   color: black;
   text-decoration: none;
-  background-color: lightblue;
+ 
 }
 
 /* .new-navbar {
@@ -60,3 +60,5 @@ ul.topnav li.right {
     float: none;
   }
 }
+
+
