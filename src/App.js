@@ -20,11 +20,11 @@ class App extends React.Component {
 
     this.state = {
       activeUser: null,
-      activeUser: {
-        id: 1234,
-        fname: "John",
-        lname: "Doe",
-      },
+      // activeUser: {
+      //   id: 1234,
+      //   fname: "John",
+      //   lname: "Doe",
+      // },
       users: jsonUsers,
       route: "",
       ECards: [],

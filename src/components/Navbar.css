@@ -2,17 +2,20 @@
   background: #f4511e;
 }
 body .navbar-main .logo-title {
-  color: white;
-  font-family: "Oswald", sans-serif;
+  color: #000;
+  font-family: "Arial", sans-serif;
+}
+body .navbar-main .logo-title:hover {
+  color: rgb(255, 255, 255);
 }
 .navbar-main a {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   vertical-align: sub;
   margin: 10px;
 }
 
 .navbar-main a:hover {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
  
 }
